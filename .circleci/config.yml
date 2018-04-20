@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: docker build -t hipages/rabbitmq:latest .
-      - run: npx -p semantic-release-docker semantic-release
+      - run: npx -p semantic-release-docker -p semantic-release -- semantic-release
 
 workflows:
   version: 2
