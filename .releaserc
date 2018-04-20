@@ -1,2 +1,3 @@
+repositoryUrl: https://github.com/hipages/docker-rabbitmq
 verifyConditions: ['@semantic-release/github', 'semantic-release-docker']
 publish: { path: 'semantic-release-docker', name: 'hipages/rabbitmq' }
