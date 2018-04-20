@@ -15,6 +15,7 @@ workflows:
   build:
     jobs:
       - build:
+          context: org-global
           filters:
             branches:
               only: master
