@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:9
     steps:
       - checkout
+      - setup_remote_docker
       - run: docker build -t hipages/rabbitmq:latest .
       - run: npx -p semantic-release-docker semantic-release
 
