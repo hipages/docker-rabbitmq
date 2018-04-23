@@ -9,3 +9,10 @@ ADD $PROMETHEUS_RABBITMQ_EXPORTER_URL/v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION/pro
 ADD $PROMETHEUS_RABBITMQ_EXPORTER_URL/v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION/prometheus_httpd-2.1.8.ez $RABBITMQ_HOME/plugins/
 ADD $PROMETHEUS_RABBITMQ_EXPORTER_URL/v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION/prometheus_process_collector-1.3.1.ez $RABBITMQ_HOME/plugins/
 ADD $PROMETHEUS_RABBITMQ_EXPORTER_URL/v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION/prometheus_rabbitmq_exporter-v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION.ez $RABBITMQ_HOME/plugins/
+
+RUN chmod 644 $RABBITMQ_HOME/plugins/accept-0.3.3.ez \
+              $RABBITMQ_HOME/plugins/prometheus-3.4.5.ez \
+              $RABBITMQ_HOME/plugins/prometheus_cowboy-0.1.4.ez \
+              $RABBITMQ_HOME/plugins/prometheus_httpd-2.1.8.ez \
+              $RABBITMQ_HOME/plugins/prometheus_process_collector-1.3.1.ez \
+              $RABBITMQ_HOME/plugins/prometheus_rabbitmq_exporter-v$PROMETHEUS_RABBITMQ_EXPORTER_VERSION.ez
